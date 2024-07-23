@@ -1,19 +1,15 @@
 ### Installation
 ```bash
-$ pip install django-timestamp2datetime
+$ pip install django-handler500
 ```
+
+### Features
++   `django.views.debug.technical_500_response` if `request.user.is_superuser`
++   `django.views.defaults.server_error` default
 
 ### Examples
-`models.py`
+`urls.py`
 ```python
-class Obj(models.Model):
-    created_at = models.IntegerField()
-```
-
-template
-```html
-{% load timestamp2datetime %}
-
-{{ obj.created_at|timestamp2datetime }}
+handler500 = "django_handler500.handler500"
 ```
 
